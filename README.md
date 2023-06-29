@@ -2,7 +2,7 @@
 
 This repo contain the code for this tutorial : https://blog.mavrick.dev/reactprogramming-paradigms-techniques-comparison-in-action-using-typescript
 
-![Project Banner](https://cdn.hashnode.com/res/hashnode/image/upload/v1688060068122/4aa21867-cdf4-4891-8e24-ea1849cbee87.png?w=1600&h=840&fit=crop&crop=entropy&auto=compress,format&format=webp)
+![Project Banner](/banner.png)
 
 ## Table of Contents
 
