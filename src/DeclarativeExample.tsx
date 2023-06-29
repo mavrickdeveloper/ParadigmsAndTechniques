@@ -1,13 +1,21 @@
-import React from 'react';
+import React from "react";
 
-const DeclarativeExample: React.FC = () => {
+// Defining TypeScript interface for component props
+type DisplayListProps = {
+    items: string[];
+};
+
+// This component is an example of Declarative Programming
+const DisplayList: React.FC<DisplayListProps> = ({ items }) => {
+    // We are describing what should be rendered in terms of the input items,
+    // without detailing the exact steps to render the list
     return (
         <ul>
-            {['Apple', 'Banana', 'Cherry'].map(fruit => (
-                <li key={fruit}>{fruit}</li>
+            {items.map(item => (
+                <li key={item}>{item}</li>
             ))}
         </ul>
     );
 };
 
-export default DeclarativeExample;
+export default DisplayList;

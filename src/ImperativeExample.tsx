@@ -1,20 +1,23 @@
-import React, { useRef } from 'react';
+import React, { useState } from "react";
 
-const ImperativeExample: React.FC = () => {
-    const inputRef = useRef<HTMLInputElement>(null);
+// This component is an example of Imperative Programming
+const ImperativeCounter: React.FC = () => {
+    // keep track of count state
+    const [count, setCount] = useState<number>(0);
 
-    const focusInput = () => {
-        if (inputRef.current) {
-            inputRef.current.focus();
-        }
+    // This is the function that will be called when the button is clicked
+    const handleIncrement = (): void => {
+        // how to update the state
+        setCount(count + 1);
     };
 
+    // Rendering the count and a button to increment it
     return (
         <div>
-            <input ref={inputRef} type="text" />
-            <button onClick={focusInput}>Focus Input</button>
+            <p>Count: {count}</p>
+            <button onClick={handleIncrement}>Increment</button>
         </div>
     );
 };
 
-export default ImperativeExample;
+export default ImperativeCounter;
