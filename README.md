@@ -26,7 +26,7 @@ Provide detailed instructions on how to install dependencies and get your projec
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/your-repo-name.git
+git clone https://github.com/mavrickdeveloper/ParadigmsAndTechniques
 
 # Navigate to the repository
 cd your-repo-name
