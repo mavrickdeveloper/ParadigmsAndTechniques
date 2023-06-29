@@ -1,27 +1,30 @@
-import React, { Component } from 'react';
+// A class representing a generic user
+class User {
+    name: string;
+    age: number;
 
-type CounterState = {
-    count: number;
-};
-
-class OOPExample extends Component<{}, CounterState> {
-    constructor(props: {}) {
-        super(props);
-        this.state = { count: 0 };
+    constructor(name: string, age: number) {
+        this.name = name;
+        this.age = age;
     }
 
-    increment = () => {
-        this.setState({ count: this.state.count + 1 });
-    };
-
-    render() {
-        return (
-            <div>
-                <p>Count: {this.state.count}</p>
-                <button onClick={this.increment}>Increment</button>
-            </div>
-        );
+    greet() {
+        return `Hello, my name is ${this.name} and I am ${this.age} years old.`;
     }
 }
 
-export default OOPExample;
+// OOP in React Component
+import React from 'react';
+
+const OopExample: React.FC = () => {
+    // Creating an object of the User class
+    const user = new User("Alice", 30);
+
+    return (
+        <div>
+            {user.greet()}
+        </div>
+    );
+};
+
+export default OopExample;
